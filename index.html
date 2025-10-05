@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Interactive Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav aria-label="Primary">
+      <div class="brand" aria-label="Site identity">
+        <h1 class="brand-title">SOUMYADEEP BHATTACHARYA</h1>
+        <p class="brand-tagline">Creative developer crafting immersive web experiences</p>
+      </div>
+      <div class="nav-actions">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="assets/Soumyadeep_Bhattacharya_CV.pdf" target="_blank" rel="noopener">CV</a>
+        <a class="nav-link" href="https://www.linkedin.com/in/soumyadeep-bhattacharya-sb/" target="_blank" rel="noopener">LinkedIn</a>
+        <button id="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle theme">🌓</button>
+        <button id="haze-toggle" type="button" aria-label="Toggle cinematic haze" title="Cinematic haze">✨</button>
+      </div>    
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero with 3D background canvas -->
+    <section id="hero" aria-label="3D Hero">
+      <canvas id="bg"></canvas>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <h1>3D Interactive Portfolio</h1>
+        <p>Creative developer crafting immersive web experiences.</p>
+        <a class="cta" href="#projects">View Projects</a>
+        <a class="cta" href="assets/Soumyadeep_Bhattacharya_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+      </div>
+    </section>
+
+    <section id="about" class="reveal" aria-labelledby="about-title">
+      <h2 id="about-title">About Me</h2>
+      <p>
+        I’m a full‑stack developer with a strong frontend focus. I craft modern, performant interfaces and immersive visuals using React.js, Tailwind CSS, and Three.js, while building reliable backends and APIs when needed. I’m also experienced in Java development and proficient in data structures and algorithms (DSA), which helps me design scalable, maintainable solutions.
+      </p>
+      <p>
+        I’m passionate about technology and problem‑solving—shaping ideas into elegant experiences. Beyond code, I enjoy music and creative experimentation, which often inspires my interaction design and motion work.
+      </p>
+    </section>
+
+    <section id="skills" class="reveal" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills</h2>
+      <ul class="skills-list">
+        <li>Java</li>
+        <li>Frontend</li>
+        <li>DSA</li>
+        <li>Backend</li>
+        <li>Tools</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="reveal" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>Intelligent File Organization</h3>
+          <p>Smart desktop utility that auto-sorts files by type, date, and context with configurable rules and undo safety.</p>
+        </article>
+        <article class="project-card">
+          <h3>E-commerce Report (Power BI)</h3>
+          <p>Interactive sales dashboard highlighting KPIs, category trends, regional performance, and customer insights using Power BI.</p>
+        </article>
+        <article class="project-card">
+          <h3>Creative Portfolio</h3>
+          <p>Motion-rich portfolio elevating narrative through micro-interactions.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <p>Have a project in mind? Let's talk.</p>
+      <a class="cta" href="mailto:soumyadeepbhattacharya2002@gmail.com">soumyadeepbhattacharya2002@gmail.com</a>
+      <p>
+        Or connect on
+        <a href="https://www.linkedin.com/in/soumyadeep-bhattacharya-sb/" target="_blank" rel="noopener">LinkedIn</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> 3D Interactive Portfolio</p>
+  </footer>
+
+  <!-- Haze overlay for cinematic blur -->
+  <div class="haze-overlay" aria-hidden="true"></div>
+
+  <!-- Three.js CDN -->
+  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+  <!-- Optional helpers (uncomment if needed) -->
+  <!-- <script src="https://unpkg.com/three@0.160.0/examples/js/controls/OrbitControls.js"></script> -->
+
+  <script src="script.js" defer></script>
+</body>
+</html>
